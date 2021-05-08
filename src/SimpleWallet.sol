@@ -8,7 +8,7 @@ contract SimpleWallet is Ownable {
         
     }
     
-    function withdrawMoney(address payable _to, uint _amount) public admin{
+    function withdrawMoney(address payable _to, uint _amount) public onlyOwner{
         
         _to.transfer(_amount);
     }
